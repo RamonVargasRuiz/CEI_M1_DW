@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Grid</title>
+    <style>
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 10px; /* separación entre filas y cols */
+    grid-gap: 1em 3em; /* separación independiente para filas y para cols */
+}
+.item-1{
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: brown;
+}
+
+.item-2{
+    /*grid-column: 1 / 4;
+    grid-row: 3 / 4;*/
+    background-color: coral;
+    grid-area: 2 / 2 / 2 / 2;
+}
+
+.item-3{
+    background-color: burlywood;
+}
+    </style>
+</head>
+<body>
+    <div class="gridContainer">
+        <div class="item-1"></div>
+        <dic class="item-2"></dic>
+        <div class="item-3"></div>
+        <div class="item-3"></div>
+        <div class="item-3"></div>
+        <div class="item-3"></div>
+        <div class="item-3"></div>
+        <div class="item-3"></div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Vertical</title>
+    <style>
+
+         /* Reset CSS */
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*Estilos de Web*/
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        .header,.footer {
+            background-color:chocolate; 
+            padding: 10px;
+        }
+
+        .content{
+            background-color: bisque;
+            padding: 10px;
+            overflow-y: scroll; /*visualización de contenido sobrante*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <h2>Header</h2>
+        </div>
+
+        <div class="content">
+            <h2>contenido</h2>
+            <p>L</p>
+        </div>
+
+        <div class="footer">
+            <h2>footer</h2>
+        </div>
+
+    </div>
+</body>
+</html>

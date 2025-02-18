@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(101, 163, 96);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Ajustar tamaño de imagen según la pantalla */
+.imgcamaleon {
+    width: 500px;
+    transition: width 0.5s ease-in-out;
+}
+
+.text {
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+/* MOBILE (320px - 768px) */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    body { background-color: rgb(50, 106, 124); }
+
+    .imgcamaleon { width: 300px; }
+
+    .text-mobile {
+        display: block;
+        font-size: 40px;
+        top: 10px;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .text-tablet, .text-pc { display: none; }
+}
+
+/* TABLET (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body { background-color: rgb(161, 39, 39); }
+
+    .imgcamaleon { width: 400px; }
+
+    .text-tablet {
+        display: block;
+        bottom: 10px;
+        font-size: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .text-mobile, .text-pc { display: none; }
+}
+
+/* PC (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    body { background-color: rgb(101, 163, 96); }
+
+    .imgcamaleon { width: 500px; }
+
+    .text-pc {
+        display: block;
+        font-size: 100px;
+        top: 27px;
+        left: 33%;
+        transform: translateX(-50%);
+    }
+
+    .text-mobile, .text-tablet { display: none; }
+}

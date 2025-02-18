@@ -1,0 +1,38 @@
+.Grid {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    width: 100%; 
+    
+}
+
+.GridItem img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+.Grid--itemTres {
+    grid-row: span 2;
+}
+
+.Grid--itemCinco {
+    grid-column: span 2;
+    grid-row: span 2; 
+}
+
+.Grid--itemNueve {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.Grid--itemDoce {
+    grid-row: span 2;
+}
+
+
+.Grid--itemDiecisiete {
+    grid-column: span 2;
+}
+

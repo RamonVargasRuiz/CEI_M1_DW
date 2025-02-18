@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo-3</title>
+
+    <style>
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+    
+.div6 {
+    grid-row: span 3 / span 3;
+}
+
+.div7 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.div8 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.div9 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.div10 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.div11 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+   
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="div6">6</div>
+    <div class="div7">7</div>
+    <div class="div8">8</div>
+    <div class="div9">9</div>
+    <div class="div10">10</div>
+    <div class="div11">11</div>
+</div>
+</body>
+</html>

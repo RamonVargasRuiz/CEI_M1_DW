@@ -1,0 +1,34 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.Footer-logo{
+    padding-bottom: 25PX;
+}
+.Footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: grey;
+}
+
+.Footer-rrss{
+    display: flex;
+    gap: 35px;
+    font-size: 1.2rem;
+}
+
+.Footer-copyright{
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding-top: 90px;
+}

@@ -1,0 +1,28 @@
+.Header{
+    display: flex;
+    padding: 20px;
+    padding-top: 30px;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .Header-logo{
+        padding-left: 15px;
+    }
+
+    .Header-pages{
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        gap: 30px;
+        font-size: 11px;
+        letter-spacing: 0.2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+    }
+
+    .Header-burguerMenu{
+        font-size: 1rem;
+        padding-right: 15px;
+    }
+

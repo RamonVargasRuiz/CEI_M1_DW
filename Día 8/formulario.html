@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+
+     <!-- GET : Recibir datos -->
+     <!-- POST : Enviar datos -->
+
+                <!--Usuario-->
+        <label for="usuario">Usuario</label>
+        <!--Para que 'for' funcione debemos de poner un ID  a cada imput-->
+        <input type="text" id="txt-usuario" name="txt-usuario" placeholder="usuario" value="juancito">
+        <br>
+
+               <!--Email-->
+        <label for="txt-email">Email</label>
+        <input type="email" id="txt-email" name="txt-email" placeholder="Tu correo">
+        <!--placeholder nos permite dejar un texto en la casilla del formulario-->
+
+                <!--Clave-->
+        <br>
+        <label for="clave">Clave</label>
+        <input type="password" id="clave" name="txt-clave" placeholder="Tu clave (8caracteres)">
+        <br>
+
+                <!--Info en texto-->
+        <label for="txt-info">Biografía</label>
+        <textarea name="descripción" id="txt-info" cols="30" rows="1"></textarea>
+
+                <!--Info en texto-->
+        <br>
+        <input type="radio" id="rd-edad" name="rd-edad" value="mayor" checked>
+        <label for="rd-edad">Mayor de 18</label>
+
+        <br>
+        <input type="radio" id="rd-edad-menor" name="rd-edad" value="menor">
+        <label for="rd-edad-menor">Menor de 18</label>
+
+        <br>
+        <input type="radio" id="rd-edad-no" name="rd-edad" value="no">
+        <label for="rd-edad-no">No contesta</label>
+
+        <h3>Hobbies</h3>
+        <input type="checkbox" id="chk-futbol" name="chk-futbol" value="futbol">
+        <label for="chk-futbol" disabled>Futbol</label>
+        <br>
+
+        <input type="checkbox" checked id="chk-basket" name="chk-basket" value="basket">
+        <label for="chk-basket">Basket</label>
+        <br>
+
+        <input type="checkbox" checked  id="chk-leer" name="chk-leer" value="leer">
+        <label for="chk-leer">Leer</label>
+        <br>
+
+        <label for="select_puesto">Trabajo</label>
+        <select name="select_puesto" id="select_puesto">
+            <option value="estudiante">Estudiante</option>
+            <option selected value="profesor">Profesor</option>
+            <option value="medico">Médico</option>
+        </select>
+
+        <br>
+        <input type="submit" value="mandar...">
+
+    </form>
+
+    
+</body>
+
+</html>

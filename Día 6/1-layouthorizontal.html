@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout horizontal</title>
+    
+    <style>
+        /*Reset CSS*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*Estilos de mi Web*/
+        .container{
+            display: flex;
+            justify-content: center;
+            background-color: teal;
+            height: 100vh; /* view height (alto de la vista) */
+        }
+        
+        .sidebar{
+            width: 250px; /* ancho de l abarra la teral */
+            padding: 20px; /* espacio interno*/
+            background-color: beige;
+        }
+        
+        /* Podemos quitar el formato de listas/li */
+
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        /* Podemos quitar el formato de link/a */
+
+        .sidebar ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Así cambiamos el color del link cuando pasamos el cursor por encima/ a:hover */
+
+        .sidebar ul li a:hover{
+            color: teal;
+        }
+        
+        .main-content {
+            padding: 10px;            
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    
+    <!--
+
+    ul>li*3{Elemento $}+li>a[href="./index.html"]{Home}
+    
+    .   class 
+    #   id
+    >   nos metemos dentro de la etiqueta
+    *   multiplican elementos
+    {}  escribe texto
+    {$} agrega un numero a cada item
+    +   agrega una etiqueta hermana (sibling)
+    []  accede a los atributos
+    
+    
+    -->
+    
+    <div class="sidebar">
+      <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li><a href="./index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <!-- shortcut en emmet
+        
+    div.main-content>h1{contenido principal}+p{lorem}
+    
+    -->
+
+    <div class="main-content">
+        <h1>Contenido principal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vel porro consectetur animi delectus earum quidem harum, velit modi quas incidunt magni nostrum optio provident perspiciatis, voluptatum dolores unde neque?</p>
+    </div>
+
+</div>
+
+
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-position</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .body{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+            background-color: #323359;
+        }
+
+        .item {
+            padding: 30px;
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            color: #ffffff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .header{
+            height: 100px;
+            display: flex;
+            background: rgb(85, 51, 172);
+
+            /*convertir en sticky*/
+            position: sticky;
+            top:0;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .container__content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .content{
+            display: flex;
+            flex-grow: 1;
+            align-content: stretch;
+            gap: 20px;
+        }
+
+        .container__sidebar{
+            width: 200px;
+            background: rgb(0, 255, 221);
+        }
+
+        .content__item{
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+            height: 300px;
+        }
+
+
+        .footer{
+            display: flex;
+            gap: 10px;
+            height: 100px;
+            background: rgb(85, 51, 172);
+        }
+        .img_whatsapp{
+            width: 40px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        
+    </style>
+</head>
+<body class="body">
+
+<header class="header item">Header</header>
+
+<main class="container">
+    <aside class="container__sidebar item">sidebar</aside>
+    <article class="container__content">
+        <header class="content item">conten 1</header>
+        <section class="content">
+            <div class="content content__item item">conten 2</div>
+            <div class="content content__item item">conten 3</div>
+        </section>
+    </article>
+</main>
+<img class="img_whatsapp" src="./WhatsApp_icon.png"alt="">
+<i class="fa-brands fa-whatsapp"></i>
+<footer class="footer item">Footer</footer>
+    
+
+
+
+<script>
+// Aquí escribimos nuestro código JavaScript
+// ATENCIÓN: Forma sencilla pero ineficiente de agregar contenido
+
+
+
+// 1.- Seleccionar la caja .content
+    let contenedor = document.querySelector(".container__content"); 
+
+// Creo un poco de HTML
+
+const miHTML =  `<div class="content">
+                    <div class="content content__item item">conten 2</div>
+                    <div class="content content__item item">conten 3</div>
+                </div>`;
+
+contenedor.innerHTML += miHTML;
+contenedor.innerHTML += miHTML;
+contenedor.innerHTML += miHTML;
+contenedor.innerHTML += miHTML;
+</script>
+</body>
+</html>

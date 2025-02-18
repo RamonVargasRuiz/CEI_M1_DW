@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* Reset CSS*/
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;          
+        }
+
+/* Estilos Web */
+
+    /*header*/
+
+        .header{
+            background-color: rgb(34, 34, 34);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+        }
+       
+        .logo {
+            color: aliceblue;
+            padding: 10px;
+        }
+
+        .a{
+            text-decoration: none;
+        }
+
+        .paginas a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .paginas{
+            padding-right: 10px;
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .paginas a:hover{
+            color:rgb(94, 90, 86)
+        }
+
+    /*caja de contenido*/
+
+        .caja_contenido{
+                display: flex;
+                flex-direction:row;
+        }
+    
+        /*barra lateral*/
+
+        .barra_lateral{
+            background-color: rgb(173, 173, 173);
+            width: 250px;
+            padding: 10px;
+            gap: 50px;
+        }
+
+        .barra_lateral ul a{
+            display: flex;
+           list-style: none;
+           text-decoration: none;
+           color: rgb(89, 89, 89);
+        }
+
+        .barra_lateral ul a:hover{
+            color:rgb(94, 90, 86)
+        }
+
+        /*contenido principal*/
+
+        .contenido_principal{
+            padding: 10px;
+            padding-left: 20px;
+            height: 90vh;
+        }
+
+        /*grid de items*/
+        .grid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .card{
+            background-color: gray;
+            color: white;
+            padding: 20px;
+
+            flex-grow: 1; /* permite al box crecer*/
+            flex-shrink: 0; /* permite hacerse más pequeño*/
+            flex-basis: 200px; /*valor inicial de nuestro elemento*/
+
+            flex: 1 0 200px; /* esto es igual a las 3 reglas de arriba*/
+        }
+
+    /*footer*/
+
+        .footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(34, 34, 34);
+        }
+
+        .text_footer{
+            color: white;
+        }
+
+    </style>
+</head>
+
+    <div class="header">
+        <h3 class="logo">Logo</h3>
+        
+        <ul class="paginas">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Acerca de</a></li>
+            <li><a href="index.html">Servicios</a></li>
+            <li><a href="index.html">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div class="caja_contenido">
+        <div class="barra_lateral">
+            <h2>Barra lateral</h2>
+            <ul>
+                <li><a href="index.html">Enlace 1</a></li>
+                <li><a href="index.html">Enlace 2</a></li>
+                <li><a href="index.html">Enlace 3</a></li>
+                <li><a href="index.html">Enlace 4</a></li>
+            </ul>
+        </div>
+
+        <div class="contenido_principal">
+            <h2>Contenido</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod possimus inventore tenetur repellat fuga hic nemo nobis deleniti esse sit veniam molestias distinctio culpa, modi ducimus itaque similique laudantium sequi?</p>
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        <p class="text_footer">Derechos de autor &#169; 2025 Nombre de la empresa</p>
+    </div>
+
+
+<body>
+    
+</body>
+</html>

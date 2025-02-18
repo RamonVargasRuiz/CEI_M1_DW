@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    /*Reset CSS*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .grid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }
+
+    .card{
+        background-color: gray;
+        color: white;
+        padding: 20px;
+
+        flex-grow: 1; /* permite al box crecer*/
+        flex-shrink: 0; /* permite hacerse más pequeño*/
+        flex-basis: 200px; /*valor inicial de nuestro elemento*/
+
+        flex: 1 0 200px; /* esto es igual a las 3 reglas de arriba*/
+
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <h2>Grid de items</h2>
+
+        <!-- div.card*6>{Tarjeta $}-->
+
+        <div class="card">tarjeta 1</div>
+        <div class="card">tarjeta 2</div>
+        <div class="card">tarjeta 3</div>
+        <div class="card">tarjeta 4</div>
+        <div class="card">tarjeta 5</div>
+        <div class="card">tarjeta 6</div>
+    </div>
+
+</body>
+</html>

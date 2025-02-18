@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img__base{
+    display: flex;
+    width: 100vw;
+}
+
+.header{
+    display: flex;
+    padding: 2rem;
+    background-color: chocolate;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.header__nav--categorias{
+    display: flex;
+    background-color: blue;
+
+}

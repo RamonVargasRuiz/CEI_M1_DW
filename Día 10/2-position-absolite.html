@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-position_absolute</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container__img{
+            width: 100%;
+            opacity: 30%;
+        }
+        .container__box{
+            position: absolute;
+            border: 1px solid blue
+        }
+
+        .container__box--HI{
+            bottom: 340PX;
+        }
+        .container__box--HD{
+            left: 400px;
+            bottom: 340px;
+        }
+
+        .container__box--C{
+            right: 850px;
+            bottom: 190px;
+        }
+
+        .container__box--DI{
+            bottom: 40px;
+            left: 10px;
+        }
+
+        .container__box--DD{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Position Absolute Gatito</h1>
+    <div class="container">
+        <div class="container__img"><img src="./shutterstock_2297469261.webp" alt="gatito"></div>
+        <div class="container__box container__box--HD">arriba-izquiera</div>
+        <div class="container__box container__box--HI">arriba-derecha</div>
+        <div class="container__box container__box--C">center</div>
+        <div class="container__box container__box--DI">abajo-izquierda</div>
+        <div class="container__box container__box--DD">abajo-derecha</div>
+    </div>
+    
+</body>
+</html>

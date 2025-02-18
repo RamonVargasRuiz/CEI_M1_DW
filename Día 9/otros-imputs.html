@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otros imputs</title>
+</head>
+<body>
+    <!--
+    type="number" 
+     Permite ingresar solo números. Se pueden establecer valores mínimos (min), máximos (max) e incrementos (step). 
+    -->
+    <div class="type-number">
+        <form action="#" method="post">
+            <label for="quantity">Del 1 al 5</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5">
+        </form>
+    </div>
+    
+    <!--
+    type="color" 
+    Muestra un selector de color para elegir un valor en formato hexadecimal.
+    -->
+    
+     <div class="type-color">
+        <form action="#" method="post">
+            <label for="favcolor">Color favorito</label>
+            <input type="color" id="color" name="favcolor">
+        </form>
+    </div>
+
+    <!--
+    type="date" 
+    Permite seleccionar una fecha en un calendario emergente.
+    -->
+
+    <div class="type-date">
+        <form action="#" method="post">
+            <label for="birthday">Cumpleaños</label>
+            <input type="date" id="birthday" name="birthday">
+        </form>
+    </div>
+
+    <!--
+    type="file" 
+    Permite subir archivos desde el dispositivo del usuario.
+    -->
+    
+    <div class="type-file">
+        <form action="#" method="post">
+            <label for="myfile">Selecciona un archivo</label>
+            <input type="file" id="myfile" name="myfile">
+        </form>
+    </div>
+
+    <!--
+    type="reset" 
+    Restaura los valores del formulario a su estado inicial.
+    -->
+
+    <div class="type-reset">
+        <form action="#" method="post">
+            <label for="reset">Nombre:</label>
+            <input type="text" id="reset" name="name">
+            <input type="reset" value="Restablecer">
+          </form>
+    </div>
+
+    <!--
+    type="hidden" 
+    Oculta un campo en el formulario (se usa para almacenar datos que no necesita ver el usuario).
+    -->
+
+    <div class="type-hidden">
+        <form action="#" method="post">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <input type="hidden" id="custId" name="custId" value="3487">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!--
+    type="Range" 
+    Crea un control deslizante para seleccionar valores dentro de un rango.
+    -->
+
+    <label for="volume">Volumen:</label>
+<input type="range" id="volume" name="volume" min="0" max="100" step="10">
+
+</body>
+</html>
