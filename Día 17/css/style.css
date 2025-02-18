@@ -1,0 +1,38 @@
+.tarjeta{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+
+    background-color: rgb(52, 52, 52);
+    color: white;
+    grid-template-areas:
+    "tarjeta__name tarjeta__name tarjeta__gallery"
+    "tarjeta__img tarjeta__img tarjeta__img"
+    "tarjeta__icons Ttarjeta__description tarjeta__description"
+}
+
+.tarjeta__gallery{
+    grid-area: tarjeta__gallery;
+}
+
+.tarjeta__name{
+    grid-area: tarjeta__name;
+}
+
+.tarjeta__img{
+    grid-area: tarjeta__img;
+    border-radius: 10px;
+}
+
+.tarjeta__icons{
+    grid-area: tarjeta__icons;
+}
+
+.tarjeta__description{
+    grid-area: tarjeta__description;
+}
