@@ -1,6 +1,8 @@
 # DÍA 2 // ARCHIVO MARKDOWN
 **Aprenderemos el uso de etiquetas para los archivos Markdown, destinados a tomar apuntes y anotaciones durante las clases**
 
+`La propiedad scale va de 0 a 1` (expliación aparte)
+
 Para tomar notas utilizaremos archivo Markdonw `README.md`
 
 ## Markdown (achico.md)
