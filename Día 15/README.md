@@ -132,7 +132,7 @@ Existe la opción repeat que nos permite repetir el número de veces que quiero 
 }
 ```
 
-Si agregamos más bloque s a lo largo de nuestro grid, se intentará ubicarlo en la primera posición libre disponible. Si no quedan posiciones libres, se creará una nueva fila. Estas nuevas celdas no tendrán el tamaño asignado en nuestro grid-template, y se llaman "grid-implicitas. Podemos usar `grid-auto-rows:100px`para deifinir el tamaño de nuestras nuevas filas."
+Si agregamos más bloques a lo largo de nuestro grid, se intentará ubicarlo en la primera posición libre disponible. Si no quedan posiciones libres, se creará una nueva fila. Estas nuevas celdas no tendrán el tamaño asignado en nuestro grid-template, y se llaman "grid-implicitas. Podemos usar `grid-auto-rows:100px`para deifinir el tamaño de nuestras nuevas filas."
 
 ```CSS
 .container{
@@ -256,7 +256,7 @@ Podemos alinear nuestro grid en base a su contenedor utilizando `justify-content
 }
 ```
 
-Podemos crear un grid responsive con el uso de `auto-fit`. Esto nos permite q  ue los elementos se ajusten al tamaño del contenedor.
+Podemos crear un grid responsive con el uso de `auto-fit`. Esto nos permite q ue los elementos se ajusten al tamaño del contenedor.
 
 ```CSS
 
