@@ -73,9 +73,32 @@ alert("Hola a todos")
 ```
 
 # DÍA 4 // SELECTORES Y RESETS EN CSS
-**Aprenderemos todos los secetores existentes en CSS y cómo funciona y Reset para nuestroa rchivo html**
+**Aprenderemos todos los secetores existentes en CSS y cómo funcionan, y Reset para nuestro archivo html**
 
 ## Selectores en CSS
 - Un selector en CSS es un patrón que se usa para seleccionar y aplicar estilos a elementos HTML específicos en una página web.
 
-Los selectores permiten definir qué elementos recibirán ciertos estilos, ya sea por su tipo de etiqueta (como <p> o <div>), su clase (.clase), su ID (#id), sus atributos ([atributo="valor"]), su relación con otros elementos o combinaciones de estos.
+- Los selectores permiten definir qué elementos recibirán ciertos estilos, ya sea por su tipo de etiqueta (como <p> o <div>), su clase (.clase), su ID (#id), sus atributos ([atributo="valor"]), su relación con otros elementos o combinaciones de estos.
+
+### ID (identifie)
+- Selecciona un elemento con el ID "caja". Se usa el símbolo `#` seguido del nombre del `ID`. Es el más específico de todos y debe de ser único dentro de la misma página.
+
+-----------------------------
+```html
+<div id=caja>  
+
+</div>
+
+
+```
+
+```CSS
+
+#caja{
+    color: blue;
+}
+
+```
+-----------------------------
+
+### CLASS ()
