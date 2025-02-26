@@ -31,7 +31,9 @@ const persona = {nombre: "julio", edad: "57", ciudad: "Murcia"};
 
 console.log(persona.nombre);
 
-edad
+persona.edad = 30;
+
+console.log(persona)
 
 
 
