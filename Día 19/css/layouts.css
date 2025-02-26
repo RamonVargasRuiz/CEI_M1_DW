@@ -39,8 +39,8 @@
 
 .footer{
     grid-area: footer;
-    justify-self: baseline;
-    align-self: baseline;
+    justify-self: ;
+    align-self: end;
     display: flex;
     justify-content: center;
     align-items: center;
