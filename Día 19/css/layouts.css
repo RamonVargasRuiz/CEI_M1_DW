@@ -29,17 +29,24 @@
 
 .main{
     grid-area: main;
+    display: grid;
+    /* grid-template-columns: ;
+    grid-template-rows: ; */
 
 
 }
 
 .sidebar{
     grid-area: sidebar;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer{
     grid-area: footer;
-    justify-self: ;
+    /* justify-self: ; */
     align-self: end;
     display: flex;
     justify-content: center;
