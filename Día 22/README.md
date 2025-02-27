@@ -4,13 +4,13 @@ Es un lenguaje de programación; un lenguaje interpretado línea por línea y en
 - Es un lenguaje de programación de alto nivel. Es interpretado y orientado a objetos. Lo utilizamos para crear contenido dinámico e interactivos en sítios webs.
 
 - Alto nivel: Está diseñado para ser fácil de leer y escribir por humanos.
-- Interpretado: Que se ejecuta en tiempo real línea por línea y NO necesita ser compilado.
+- Interpretado: Que se ejecuta en tiempo real línea por línea y NO necesita ser compilado (renderizado).
 
 ```js
 let numero = 1;
 console.log("Linea 1 y número vale: , numero"); 
 // imprime en consola el texto  "Linea 1 y numero vale: 1"
-numero = numero + 2;
+numero = numero + 2; //numero vale 3
 console.log("Linea 2 y número vale: ", numero);
 // imprime en consola el texto "Linea 2 y el numeor vale: 3"
 ```
@@ -28,9 +28,9 @@ Perro:
 ```js
 // ejemplo de propiedades y métodos
 const alumno = {
-    nombre: "Lucía Perez",// Características
-    edad: 35,
-    hobbies: ["futbol", "programar", "leer"]; // lo vemos más adelante
+    nombre: "Lucía Perez", // Características
+    edad: 35, // Características
+    hobbies: ["futbol", "programar", "leer"]; // lo vemos más adelante. Es una lista
     saludar:function () { //Funciones
         console.log("hola, mi nombre es lucía");
     }
@@ -38,7 +38,7 @@ const alumno = {
 
 // Para imprimir el nombre del alumno usamos algo como:
 console.log(alumno.nombre);
-console.log("Me llamo", alumno.nombre, "y tengo", alumno.edad, "años"); // Me llamo Lucís Perez y tengo 35 años
+console.log("Me llamo", alumno.nombre, "y tengo", alumno.edad, "años"); // Me llamo Lucía Perez y tengo 35 años
 
         // Utilizamos la constante y le añadimos un punto para buscar dentro de ella. En este caso la constante es `alumno` y queremos buscar el nombre, así que haremos: alumnos.nombre
 
