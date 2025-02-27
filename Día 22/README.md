@@ -30,11 +30,20 @@ Perro:
 const alumno = {
     nombre: "Lucía Perez", // Características
     edad: 35, // Características
-    hobbies: ["futbol", "programar", "leer"]; // lo vemos más adelante. Es una lista
+    direccion: {
+        calle: "calle falsa", // Porpiedad con propiedades
+        num: 123
+    }
+    hobbies: ["futbol", "programar", "leer"]; // Es una lista
     saludar:function () { //Funciones
         console.log("hola, mi nombre es lucía");
     }
 }
+
+console.log(alumno.direccion.num)
+
+const direccion = alumno.direccion.calle+" "+alumjo.direccion.num;
+console.log(direccion); // Calle falsa 123
 
 // Para imprimir el nombre del alumno usamos algo como:
 console.log(alumno.nombre);
@@ -52,7 +61,7 @@ alumnos.saludar();
 - En el navegador: En la pestaña de consola.
 - En etiquetas de `<script>` dentro de HTML, y se suelen poner al final antes de cerra el </body>
 - Se pueden usar archivos externos con la extensión `.js`linqueando en nuestro html: <script src="./js/mijs.js> `buscar el resto de apuntes que estan el la clase grabada`
-
+-   Usar extensión en VSC -> Quokka 
 
 
 # Funcionalidades
@@ -115,6 +124,10 @@ alumno.presentarProyecto (); // esto ejecuta, presenta el proyecto
 
 const alumnosDeDW = ["JHON", "Sonia", ...];
 const edades = [23, 26, 72];
+
+edades[0]; // 23
+edades[1]; // 26
+
 cont ListaMixta = [1, "juan", true, {val1: "hola", val2: "chau"}];
 
 // Las listas comienzan su índice en 0
@@ -132,6 +145,7 @@ const alumno ={
     edad: 33,
     isRecibido: false,
     presentarProyecto: function() {
+        //this es para referisre a ESTE objeto.
         this.isRecibido = true;
         this.edad = 34;
     }
@@ -139,4 +153,40 @@ const alumno ={
 }
 
 alumno.edad = 37;
+```
+
+
+
+## Variables y tipos de datos 
+
+```js
+
+// Number: Representa valores numéricos, incluyendo enteros y decimales
+let numero = 42;
+console.log(numero); // Output: 42
+
+// String: Representa secuencias de caracteres (texto)
+let texto = "Hola, mundo!";
+console.log(texto); // Output: Hola, mundo!
+
+// Boolean: Representa valores de verdadero (true) o falso (false)
+let esVerdadero = true;
+console.log(esVerdadero); // Output: true
+
+// Null: Representa la ausencia intencionada de un valor
+let valorNulo = null;
+console.log(valorNulo); // Output: null
+
+// Undefined: Representa una variable declarada pero sin valor asignado
+let indefinido;
+console.log(indefinido); // Output: undefined
+
+// Symbol: Representa un valor único e inmutable, útil para identificadores únicos
+let simbolo = Symbol("identificador");
+console.log(simbolo); // Output: Symbol(identificador)
+
+// BigInt: Se usa para representar números enteros muy grandes que no pueden representarse con Number
+let numeroGrande = BigInt(9007199254740991);
+console.log(numeroGrande); // Output: 9007199254740991n
+
 ```

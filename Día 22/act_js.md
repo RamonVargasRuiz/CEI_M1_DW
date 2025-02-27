@@ -64,6 +64,9 @@ const alumno3 = {
    nota:90,
 };
 
+consol.log(alumno2.nombre)
+
+
 const estudiantes = [ alumno1 , alumno2 , alumno3];
 
 alumno1.nota = 95;
@@ -78,11 +81,11 @@ alumno1.nota = 95;
 for (
    let i = 0 ; 
    i < estudiantes.lenght;
-   i++; 
+   i++)
    {
       console.log = (
          "nombre: " + estudiantes[i].nombre + "nota:" + estudiantes[i].nota
-      );});
+      );};
 
 // Ahora imprimimos los nombres y las notas de los estudiantes.
 // Estamos diciendo: "Vas a imprimir el nombre del estudiante poniendo `nombre:` al principio. Después de eso vas a imprimir el nombre del estudiante con valor i conforme el bucle se ejecute, y por útimo vas a hacer lo mismo con las notas de los pobres estudiantes."
@@ -96,11 +99,42 @@ for (
 - Asigna valores a a y b y llama al método sumar, imprimiendo el resultado en la consola.
 
 ```js
- const calculadora (
-      a = 1;
-      b = 2;
- )
+ const calculadora = {
+   a: 5,
+   b: 3,
+   sumar: function() {
+      console.log(this.a + this.b);
+   }
+ }
 
- // sería con function pero no se como se hace
+console.log(calculadora.a);
+
+
+
+const listaEstudiantes = [
+  { nombre: "petalo", nota:70 },
+  { nombre: "burbuja", nota:80 },
+  { nombre: "cactus", nota:90 }
+];
+
+console.log(listaEstudiantes[1].nombre)
+
+
+const calculadora = {
+  a: 5,
+  b: 3,
+  sumar: function() {
+     console.log(this.a + this.b);
+  }
+}
+
+console.log(calculadora.a);
+console.log(calculadora.b);
+calculadora.sumar();
+
+calculadora.a = 15;
+calculadora.b = 30;
+calculadora.sumar();
+
 
 ```
