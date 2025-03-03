@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="Num1" placeholder="Numero 1" >
+
+    <input type="number" id="Num2" placeholder="Numero 2" >
+
+    <button id="btnSuma">+</button>
+    <button id="btnResta">-</button>
+    <button id="btnMulti">x</button>
+    <button id="btnDivi">/</button>
+
+    <button id="btnIgual">=</button>
+
+    <h3>Resultado</h3>
+    <div id="resultado"></div>
+    
+
+    <script>
+
+        const numeroUno = document.getElementById("Num1");
+        const numeroDos = document.getElementById("Num2");
+
+        const miBotonSuma = document.getElementById("btnSuma");
+        const miBotonResta = document.getElementById("btnResta");
+        const miBotonMultiplica = document.getElementById("btnMulti");
+        const miBotonDivide = document.getElementById("btnDivi");
+
+        const divResultado = document.getElementById("resultado");
+        
+        function ImprimirEnPantalla(dato) {
+            console.log(dato);
+            divResultado.innerText = dato;
+        }
+        let numero=0;
+        
+        
+        ImprimirEnPantalla( "Haz click en los botones");
+        ImprimirEnPantalla(numero);
+       
+        miBotonSuma.addEventListener("click", () => {
+            numero = numero +1;
+            ImprimirEnPantalla(numero);
+        });
+
+        miBotonResta.addEventListener("click", () => {
+            numero = numero -1;
+            ImprimirEnPantalla(numero);
+        });
+
+
+    </script>
+</body>
+</html>

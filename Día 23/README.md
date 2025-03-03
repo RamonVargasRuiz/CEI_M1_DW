@@ -108,8 +108,27 @@ Los bucñes For se dividen en 3 partes:
 for(let i=10; i > 0 ; i--){
     console.log ("numero: ", i)
 }
-// código para mostar numeros del 10 al 1
-// es un código a la inversa de lo que hemos estados viendo
+// Código para mostar numeros del 10 al 1.
+// Es un código a la inversa de lo que hemos estados viendo.
+
+// Esta es otra forma de escribri un bucle pero con menos líneas usando mientras (while).
+
+let i=0;
+while (i<10){
+    //inicio del bulce
+    console.log(i);
+    // Fin del bucle
+    i++;
+}
+
+// Bucle do - while
+// Funciona igual que el while pero se ejecuta al menos una vez. la primera vez siempre se va a ejecutar.
+let i=25;
+do{
+    console.log(i);
+    i++;
+
+} while (i<10)
 
 ```
 
