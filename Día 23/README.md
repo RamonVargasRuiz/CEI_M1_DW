@@ -94,3 +94,101 @@ let decrParaB = b--;        // 4
 
 
 
+## BUCLES
+
+Los bucñes For se dividen en 3 partes:
+
+1. Iniciar una variables (Normalmene `i`)
+2. Crear una condición para esta variable (ej: i<10)
+3. Iniciar un cambio de variable en cada 
+
+
+```js
+
+for(let i=10; i > 0 ; i--){
+    console.log ("numero: ", i)
+}
+// código para mostar numeros del 10 al 1
+// es un código a la inversa de lo que hemos estados viendo
+
+```
+
+## Funciones
+
+Secciones de códigos reutilizables
+
+```js
+
+// 1.- Crear la función
+function saludar(){
+
+}
+
+
+// 2.- Usar la función desde donde queramos
+
+// Entra Juan
+
+// Entra María
+
+
+
+let num1 = 10;
+let num2 = 20;
+
+// Parte uno : Crear la función
+function sumar(){
+    // Todo lo quie esté aquí adentro se ejecuta cuando use la función
+
+    console.log(num1+num2);
+}
+
+// Parte dos: Ejecutar función
+
+sumar();
+
+// --------------
+
+
+function saludar( nombre , edad){
+
+    console.log("Hola" + nombre + "como estas?");
+    console.log("Tienes" + edad + "años")
+}
+
+saludar ("maría", 25);
+saludar ("juan", 12);
+saludar ("pedro" );
+
+
+// Crear tres funciones: Sumar, restar y multiplicar
+// Enviarle distintos valores como "Parámetro" a las funciones
+// Calcular 5 + 3
+// calcular 10 + 5
+// Calcular 3 + 8
+
+
+// Def de los nombres de las cosas
+
+
+
+function sumar(a,b){
+    console.log("Suma: ", a+b)
+}
+sumar(5,3);
+
+// Function multi ( parametro 1, parametro 2 ) { ... }
+
+function multi(a,b){
+  console.log("Suma: ", a*b)
+}
+
+// Function multi ( parametro 1, parametro 2 ) { ... }
+
+multi(5,3);
+
+function resta(a,b){
+  console.log("Suma: ", a-b)
+}
+restar(5,3);
+```
