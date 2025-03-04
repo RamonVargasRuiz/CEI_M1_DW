@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+}
+
+#pantalla {
+    grid-column: span 4;
+    height: 50px;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Number {
+    background: #444;
+    color: white;
+}
+
+.Number:hover {
+    background: #666;
+}
+
+.suma, .resta, .multi, .divi {
+    background: #ff9500;
+    color: white;
+}
+
+.suma:hover, .resta:hover, .multi:hover, .divi:hover {
+    background: #e68900;
+}
+
+.igual {
+    background: #28a745;
+    color: white;
+    grid-column: span 2;
+}
+
+.igual:hover {
+    background: #218838;
+}
+
+.reset {
+    background: #dc3545;
+    color: white;
+    grid-column: span 2;
+}
+
+.reset:hover {
+    background: #c82333;
+}

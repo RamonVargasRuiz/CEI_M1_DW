@@ -1,3 +1,15 @@
+## Operador OR y AND
+
+```js
+const edad = 25;
+const tienePermiso=true;
+
+// para que cumpla ambas opciones usar &&
+if(edad>=)
+
+
+```
+
 ## formas de escribir funciones 
 
 ```js
@@ -26,8 +38,16 @@ const sumar = (num1,num2) => {
 }
 
 // funcion flecha reducida (solo se puede utilizar si mi código tiene una sola línea).
+// quitamos las llaves y quitamos la palabra return.
 
 const sumar = (num1, num2) => num1+num2;
+
+const saludar = (nombre) => {
+    return "Hola como andas"+nombre+"?":
+}
+
+const saludar = nombre => "Hola como andas"+nombre+"?":
+
 
 // -------------------------------------
 
@@ -92,3 +112,29 @@ if(""){
 }
 
 ```
+
+
+## Bucles
+
+```js
+
+for(let i=0;i< 10;i++ ){
+    console.log(i);
+}
+
+let num=0;
+while(num <10){
+    console.log(num);
+    num++;
+}
+
+num=99;
+do {
+    console.log(num);
+    num++;
+} while( num<10);
+
+```
+
+
+## Aviso nuevo para el ejercício del día 26

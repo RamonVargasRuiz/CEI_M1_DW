@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="calculadora">
+        <input type="number" id="pantalla" placeholder="0">
+    
+        <button class="Btn1 Number">1</button>
+        <button class="Btn2 Number">2</button>
+        <button class="Btn3 Number">3</button>
+        <button class="Btn4 Number">4</button>
+        <button class="Btn5 Number">5</button>
+        <button class="Btn6 Number">6</button>
+        <button class="Btn7 Number">7</button>
+        <button class="Btn8 Number">8</button>
+        <button class="Btn9 Number">9</button>
+        <button class="Btn0 Number">0</button>
+    
+        <button class="suma">+</button>
+        <button class="resta">-</button>
+        <button class="multi">x</button>
+        <button class="divi">/</button>
+        <button class="reset">C</button>
+        <button class="igual">=</button>
+    </div>
+
+<script>
+    // seleccionar los elementos de nuestro documento
+
+    const = btn0.querySelect
+
+
+    // declarar las variables con Let
+    let num1=0;
+    let num2=0;
+    let resultado=0;
+    let operacion="";
+
+    // Aplicamos lo de escuchar el click
+
+    Btn0.addEventListener("click", ()=>{agregarNumero(0);})
+    Btn1.addEventListener("click", ()=>{agregarNumero(1);})
+    Btn2.addEventListener("click", ()=>{agregarNumero(2);})
+    Btn3.addEventListener("click", ()=>{agregarNumero(3);})
+    Btn4.addEventListener("click", ()=>{agregarNumero(4);})
+    Btn5.addEventListener("click", ()=>{agregarNumero(5);})
+    Btn6.addEventListener("click", ()=>{agregarNumero(6);})
+    Btn7.addEventListener("click", ()=>{agregarNumero(7);})
+    Btn8.addEventListener("click", ()=>{agregarNumero(8);})
+    Btn9.addEventListener("click", ()=>{agregarNumero(9);})
+
+
+    // Bt1....
+
+    function agregarNumero(num) {
+        if(operacion== ""){
+            num1 + num1+10 + num;
+            input
+        }
+        // numero = numero *10 + num
+        num1 = num1*10 + num;
+
+        inputNumero.value= num1;
+        // value imprime en pantalla
+    }
+    
+
+
+
+
+</script>
+
+</body>
+</html>
