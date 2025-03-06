@@ -21,7 +21,7 @@ console.log(saludo) // Hola, ¿cómo estas?
 
 2. Interpolación
 
-Cunado usamos palntillas literales (`template literals` / template Strings), se pueden insertar `variables` o `exprsiones` dentro de una cadena de texto usando `${}`.
+Cunado usamos palntillas literales (`template literals` / `template Strings`), se pueden insertar `variables` o `expresiones` dentro de una cadena de texto usando `${}`.
 
 ```js
 
@@ -29,6 +29,13 @@ let nombre ="Lucia";
 let edad = 25;
 
 const FullName = `${apellido}, ${nombre}`; // Pérez, Lucía
+
+// -- mirar bien esta movida !
+
+let edad = 25;
+
+const mensaje = edad + 1; //26
+const mensaje = edad + 1 "años" //251
 
 
 // Interpolación //se puede usar el enter con la interpolación.
@@ -98,7 +105,7 @@ const email="maria@alumnos.cei.es";
 const separacion = email.split("@");
 console.log(separacion); // ["maria", "alumnos.cei.es"]
 
-// Slice()
+// slice()
 
 let frase = "Aprender Javascript es divertido";
 console.log("Parte de la frase: " frase.slice(9,19)); // javascript
@@ -108,9 +115,12 @@ console.log("Desde el índice 9 al final: ", frase.slice(9)); // javascript es d
 let frase="Hola mundo. hola hola hola hola universo";
 console.log("Reemplazar 'hola' por 'Hola': ", frase.replace("hola","Hola")); // cambia la primera que encuentre
 console.log("Reemplazar 'hola' por 'Hola': ", frase.replaceAll("hola","Hola")); // Hola mundo. Hola Hola Hola Hola universo
+console.log("reemplazar todas con RegEX: ", frase.replace(/hola/g, "Hola"));
 
 
 // trim()
+
+// Ideal para <textareas> y para formularios.
 
 let frase = "      Hola mi nombre es Luka   ";
 console.log(frase.trim()); // "Hola mi nombre es Luka"
@@ -118,9 +128,11 @@ console.log(frase.trim()); // "Hola mi nombre es Luka"
 
 // includes
 
+// ideal para arrays
+
 let frase = "El sol brilla en el cielo";
 console.log("Contene la palabra 'sol'?" + frase.includes("sol")); // True
-console.log("Contene la palabra 'Luna'?" + frase.includes("sol")); // True
+console.log("Contene la palabra 'Luna'?" + frase.includes("sol")); // False
 
 // startsWith y endsWith
 
@@ -135,6 +147,8 @@ console.log("Me causa mucha risa:", risa.repeat(3)); //jajaja
 
 let frase="Hola Como Andan";
 console.log(frase.length); //15
+
+// .lenght cuento los caracteres incluyendo símbolos y espacios
 
 ```
 
@@ -156,3 +170,19 @@ let resultado = frase .trim()                               // elimina espacios 
 
 
 
+## 
+
+```js
+
+const hobbies = ["Futbol", "Programar en js", "Leer"];
+
+let i=25;
+
+for (i=0, i< hobbies.length; i++){
+    const hobbie = hobbie[i]; // "Futbol"
+    console.log(hobbie); 
+}
+
+console.log(i); // 25
+
+```

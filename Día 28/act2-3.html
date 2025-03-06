@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Corrector</h3>
+    <textarea name="comentario" cols="30" rows="10" id="comentario"></textarea>
+
+    <div class="resultado"></div>
+
+    <script>
+
+        // Definir constantes - variables
+        const textarea = document.querySelector("#comentario");
+        const palabrasOfensivas = ["emparedado", "desubicado", "burro"];
+        const divRes = document.querySelector(".resultado");
+
+        // Función para censurar palabras
+        textarea.addEventListener("keyup", () => {
+            // Leer datos 
+            let texto = textarea.value;
+
+            // Procesarlos
+            for (let i = 0; i < palabrasOfensivas.length; i++) {
+                const palabra = palabrasOfensivas[i];
+                const censura = "***";
+
+                texto = texto.replaceAll(palabra, censura);
+            }
+
+            // Imprimir resultado
+            divRes.innerText = texto;
+        });
+
+    </script>
+
+</body>
+</html>

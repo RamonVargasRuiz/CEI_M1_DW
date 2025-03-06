@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hl{
+            color: blue;
+            font-size: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+    <input type="text" id="inputEj3" value="" placeholder="Ingrese un texto...">
+    <button id="btnEj3"> Revisar texto </button>
+
+    <div id="resEj3">
+
+    </div>
+
+
+    <script>
+
+            //  Ej 1.3
+            // Declaro varianbles
+
+            const inputEj3 = document.getElementById("inputEj3");
+            const btnEj3 = document.getElementById("btnEj3");
+            const divEj3 = document.getElementById("resEj3");
+            const marca = "CEI";
+            const nuevaMarca = `<span class='hl'>${marca}</span>`;
+
+            //Funciones
+
+            inputEj3.addEventListener("keyup", ()=> {
+
+            const inputText = inputEj3.value;
+
+            // usar replaceALL para cambiar nuestro texto
+
+            divEj3.innerHTML  = inputText.replaceAll(marca, nuevaMarca);
+
+            });
+
+            // Iniciar código
+
+
+    </script>
+    
+</body>
+</html>
