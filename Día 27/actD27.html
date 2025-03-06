@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- Ej 1.1 -->
+    <h1>no me gusta javascript</h1>
+    <div id="mayus"></div>
+
+    <!-- Ej 1.2 -->
+    <p id="nombre">Juan Perez</p>
+
+    <span id="iniciales"> </span>
+
+    <script>
+        // Ej 1.1
+        let h1 = document.querySelector("h1");
+        const printDiv = document.getElementById("mayus");
+    
+        h1 = h1.innerText;
+        printDiv.innerText = h1.toUpperCase();ç
+
+        // Ej 1.2
+        const nombre = document.getElementById("nombre");
+        let iniciales = document.getElementById("iniciales");
+
+        let nombreCompleto = nombre.textContent.split()
+
+        iniciales=iniciales.inerText;
+        iniciales.innerText = nombre.split("Juan")
+                                    .split("Perez")
+                                    .slice(1);
+
+        
+    </script>
+    
+</body>
+</html>

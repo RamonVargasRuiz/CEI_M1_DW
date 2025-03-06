@@ -5,8 +5,14 @@ const edad = 25;
 const tienePermiso=true;
 
 // para que cumpla ambas opciones usar &&
-if(edad>=)
+if(edad<= 120 && edad >= 18){
+    console.log("eres mayor de edad")
+}
 
+// para que cumpla alguna de las 2 opciones usar ||
+if(edad>=18 || tenePermiso ==true){
+    console.log("puedes entrar")
+}
 
 ```
 
