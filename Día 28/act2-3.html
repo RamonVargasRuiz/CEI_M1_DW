@@ -27,10 +27,12 @@
             // Procesarlos
             for (let i = 0; i < palabrasOfensivas.length; i++) {
                 const palabra = palabrasOfensivas[i];
-                const censura = "***";
+                const censura = "*";
 
                 texto = texto.replaceAll(palabra, censura);
             }
+
+            //cambiar el for por algo mejor
 
             // Imprimir resultado
             divRes.innerText = texto;
