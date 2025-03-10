@@ -1,7 +1,7 @@
 ## Operación ternaria
 `cuando es un if...else común, se recomienda usar estas.`
 
-Una fomra de reescribri el `if...else`. Se componen de tres partes: 
+Una forma de reescribri el `if...else`. Se componen de tres partes: 
 
 1. Una expresión que se evalua
 2. Expresión que se ejecuta en el caso de ser cierta

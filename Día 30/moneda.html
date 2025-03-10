@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneda virtual</title>
+</head>
+
+<body>
+
+    <h3 id="resultado"> Tiraste  </h3>
+
+    <button id="moneda">¡Tira la moneda!</button>
+
+    <p>
+        Cant de caras: <span id="cantcaras">0</span> <br>
+        Cant de cruces: <span id="cantcruces">0</span> <br>
+        Porcentaje de caras <span id="porcentaje">0</span> <br>
+    </p>
+
+    <script>
+        let resultado = document.querySelector("#resultado");
+        let ccruces = document.querySelector("#cantcruces");
+        let ccaras = document.querySelector("#cantcaras");
+        let porcentaje = document.querySelector("#porcentaje");
+        let moneda = document.querySelector("#moneda");
+
+        let cantCaras = 0;
+        let cantCruz = 0;
+
+        moneda.addEventListener('click', () => { 
+            const tirada = Math.round(Math.random()); 
+
+            if (tirada === 0) { 
+                resultado.textContent = "Tiraste Cruz";
+                cantCruz++;
+            } else {
+                resultado.textContent = "Tiraste Cara";
+                cantCaras++; 
+            }
+
+            const porciento = (cantCaras / (cantCaras + cantCruz)) * 100; 
+
+            ccruces.innerText = cantCruz;
+            ccaras.innerText = cantCaras;
+            porcentaje.innerText = porciento+'%';
+        });
+
+    </script>
+    
+</body>
+</html>
