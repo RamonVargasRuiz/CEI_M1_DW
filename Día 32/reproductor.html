@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+</head>
+
+<body>
+
+    <h3>Reproductor</h3>
+
+    <div id="playlist">
+        <div class="card">
+            <span class="artista">artista</span>
+            <span class="mp3">cancion</span>
+        </div>
+    </div>
+
+    <button id="play"></button>
+    <button id="pausa"></button>
+    <button id="siguiente"></button>
+    <button id="anterior"></button>
+
+    <button id="tema3">Tema 3</button>
+
+
+    <script>
+
+        const playList = document.getElementById("playlist");
+
+        const listaCanciones =[
+            "www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        ];
+
+        const listaArtistas = [
+            "Juanes",
+            "Marea",
+            "Sfdk",
+            "Virtual",
+            "Julieta"
+        ];
+
+        const cantItems = listaArtistas.length;
+
+        for(let i=0; i< listaCanciones.lenght; i++){
+            const cancion = listCanciones[i];
+            const artista = listaArtistas[i];
+        }
+
+        listaCanciones.forEach((cancion, idx) =>{
+            console.log(listaArtistas[idx]);
+            console.log(cancion);
+        })
+
+    </script>
+    
+</body>
+</html>
