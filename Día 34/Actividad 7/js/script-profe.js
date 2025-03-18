@@ -2,7 +2,11 @@ const containerBloques = document.querySelector(".container");
 const listaBloques = document.querySelectorAll(".tab-content");
 const listaButtons = document.querySelectorAll(".nav-button");
 const containerCanciones = document.getElementById("containerCanciones");
+
 const cancionActual = document.getElementById("cancionActual");
+
+let idCancionActual = 0;
+
 const canciones = [
     {
         id: 1,
@@ -66,7 +70,7 @@ canciones.forEach(tema => {
 
     // Usamos innerHTML para crear nuestros temas
     containerCanciones.innerHTML += `               
-        <li class="cancion">
+        <li class="cardCancion">
             <img class="imgCancion" src="./${imagen}" alt="${artista}">
             <div>
                 <h2 class="tituloCancion" >${titulo}</h2>
@@ -77,7 +81,7 @@ canciones.forEach(tema => {
 
 // ------------------- REPRODUCTOR ------------------- //
 
-
+// corregir este código. Usar la clase .cardCancion para añadir el addeventlistener
 canciones.addEventListener("click" (titulo) => {
 
 cancionActual.innerHTML = `      
