@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <style>
+        .card {
+            border-radius: 8px;
+            background-color: lightgrey;
+            padding: 10px;
+            width: 400px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h3>Reproductor</h3>
+    <div id="playlist"></div>
+    <div id="cancionActual">
+        aquí irá la canción actual
+    </div>
+    <div class="repro">
+        <button id="play">Play</button>
+        <button id="pausa">Pausa</button>
+        <button id="siguiente">Siguiente</button>
+        <button id="anterior">Anterior</button>
+        <button id="tema3"> Tema 3 </button>
+    </div>
+    <script>
+        const playList = document.getElementById("playlist");
+        const tema3 = document.getElementById("tema3");
+        const repro = document.getElementById("repro");
+        const cancionActual = document.getElementById("cancionActual");
+
+        let idCancion = 0; // id de la canción reproduciendose, tenemso que actuyalizar esta variable para que el repdroductor reproduzca el tema
+
+        const listaCanciones = [
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+            "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+        ];
+
+        const listaArtistas = [
+            "Juanes",
+            "Marea",
+            "Sfdk",
+            "Virtual",
+            "Julieta"
+        ];
+
+        const listaCover = [
+            "https://picsum.photos/id/237/200/300",
+            "https://picsum.photos/id/238/200/300",
+            "https://picsum.photos/id/239/200/300",
+            "https://picsum.photos/id/236/200/300",
+            "https://picsum.photos/id/235/200/300"
+        ];
+
+        listaCanciones.forEach((cancion, idx) => {
+            const artista = listaArtistas[idx];
+            const imagen = listaCover[idx];
+            playList.innerHTML += `
+                <div id="${idx}" class="card">
+                    <div><img src="${imagen}" alt="Cover" width="100"></div>
+                    <span class="artista"> <strong>${artista}</strong></span> <br>
+                    <span class="mp3"> <a href="${cancion}" target="_blank">${cancion}</a></span>
+                </div>    
+            `;
+        });
+
+        const handleCargarCancion = () => {
+            const artista = listaArtistas[idCancion];
+            const cancion = listaCanciones[idCancion];
+            const imagen = listaCover[idCancion];
+
+            console.log("El artista es:", artista, "y la canción es:", cancion);
+
+            cancionActual.innerHTML = `
+                <span> <strong>${artista}</strong></span> <br>
+                <span> ${cancion}</span>
+                <div><img src="${imagen}" alt="Cover" width="100"></div>
+            `;
+        }
+
+        tema3.addEventListener('click', () => handleCargarCancion(2));
+
+        document.addEventListener("click", (event) => {
+            console.log(event.target.id);
+            handleCargarCancion(event.target.id);
+        });
+
+        handleCargarCancion(1);
+        handleCargarCancion(3);
+        handleCargarCancion(4);
+    </script>
+</body>
+</html>
