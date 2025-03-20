@@ -31,7 +31,7 @@
     </style>
 
     <script>
-    // 1. Cambiar los estilos de todos los párrafos poniendo su color en "#333" y su fuente a 16px
+        // 1. Cambiar los estilos de todos los párrafos poniendo su color en "#333" y su fuente a 16px
 
         const listaParrafos = document.querySelectorAll("p");
         listaParrafos.forEach( (parrafo) =>{
@@ -39,7 +39,7 @@
             parrafo.style.fontSize = "32px";
         });
 
-    // 2. Teniendo dos botones con class "btn", usar forEach para agregar un evento de click a cada uno, y que al hacer click, cambie su color de fondo a #007bff y texto blanco.
+        // 2. Teniendo dos botones con class "btn", usar forEach para agregar un evento de click a cada uno, y que al hacer click, cambie su color de fondo a #007bff y texto blanco.
 
         const botones = document.querySelectorAll(".btn");
         botones.forEach( (boton) => {
@@ -49,7 +49,7 @@
             });
         });
 
-    // 3. Mostrar / ocultar elementos. Seleccionar todos los elementos ".card" y crear un botón que los oculte/muestre cunaod le haga click.
+        // 3. Mostrar / ocultar elementos. Seleccionar todos los elementos ".card" y crear un botón que los oculte/muestre cunaod le haga click.
 
         const cardList = document.querySelectorAll(".card");
         const btnToggleCard = document.querySelector(".btnToggleCard");
@@ -61,18 +61,25 @@
             });
         });
         
-    // 4. Crear un menú dinamicamente dado el array ["Home" , "Nosotros" , "Contacto" ]. Usa forEach para crear un enlace <a> y agregala a nuestro <nav>.
-        // Home -> <a href="#Home"> Home </a>
-        // Nosotros -> <a href="#Nosotros"> Nosotros </a>
-        // Contacto -> <a href="#Contacto"> Contacto </a>
+        // 4. Crear un menú dinamicamente dado el array ["Home" , "Nosotros" , "Contacto" ]. Usa forEach para crear un enlace <a> y agregala a nuestro <nav>.
+            // Home -> <a href="#Home"> Home </a>
+            // Nosotros -> <a href="#Nosotros"> Nosotros </a>
+            // Contacto -> <a href="#Contacto"> Contacto </a>
 
-        const ListaMenu = ["Home", "Nosotros", "Contacto"];
-        const nav = document.getElementById("menu");
+            const ListaMenu = ["Home", "Nosotros", "Contacto"];
+            const nav = document.getElementById("menu");
 
-        ListaMenu.forEach(item => {
-        const enlace = `<a href="#${item}">${item}</a>`;
-        nav.innerHTML += enlace; // Agregar el enlace al contenido de <nav>
-        });
+            ListaMenu.forEach(item => {
+                const enlace = `<a href="#${item}">${item}</a>`;
+                nav.innerHTML += enlace; 
+                
+            });
+
+
+            
+        
+
+
 
     </script>
 </body>

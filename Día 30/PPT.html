@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./stylesppt.css">
     <title>PPT</title>
 </head>
 <body>
-    <h3 id="resultado"> Ganador:  </h3>
+    <h3 id="resultado"> Resultado:  </h3>
 
     <button id="piedra"> Piedra </button>
     <button id="papel"> Papel </button>
     <button id="tijera"> Tijera </button>
+
+    <button id="bntAiVsAi"> Auto Play!</button>
 
     <p>
         Ganaste: <span id="ganadas">0</span> veces.<br>
@@ -29,12 +32,16 @@
         let papel = document.querySelector("#papel");
         let tijera = document.querySelector("#tijera");
 
+        let btnAutoPlay = document.querySelector("#bntAiVsAi"); // IA vs IA
+
         let ganadas = document.querySelector("#ganadas");
         let perdidas = document.querySelector("#perdidas");
         let porcentaje = document.querySelector("#porcentaje");
 
 
         //------------------------------
+
+        btnAutoPlay.addEventListener("click", AIvsAI); // Corrección aquí
 
         piedra.addEventListener('click', () => {
             jugar("piedra");
@@ -51,7 +58,7 @@
         function jugar(usuario){
             const jugadorIA = seleccionDeIA();
             const resultadoJuego = queJugadorGana(usuario, jugadorIA);
-            resultado.textContent = "Ganador: " + resultadoJuego;
+            resultado.textContent = "Resultado: " + resultadoJuego;
         };
 
         // selección de la IA
@@ -69,11 +76,21 @@
             if( (j1 === "piedra" && j2 === "tijera") ||
                 (j1 === "tijera" && j2 === "papel") ||
                 (j1 === "papel" && j2 === "piedra") ) {
-                return "Ganó Jugador 1";
+                return "Ganaste!";
             } else {
-                return "Ganó Jugador 2";
+                return "Perdiste...";
             }
         };
+
+        function AIvsAI(){
+
+            // set interval repite una función, múltiples veces, dependiendo del tiempo en el segundo parámetro.
+            setInterval(() => {
+                const jugador = seleccionDeIA();
+                jugar(jugador); // Corrección aquí
+
+            }, 1000);
+        }
 
     </script>
 </body>
