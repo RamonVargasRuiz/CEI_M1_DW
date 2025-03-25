@@ -2,7 +2,7 @@
 // Parte 1: Declaramos nuestras variables y referencias del DOM
 // ---------------------------------------------------------------
 
-const cargarDatos = document.querySelector("#cargarBtn");
+const cargarDatosBtn = document.querySelector("#cargarBtn");
 const limpiarDatos = document.querySelector("#limpiarBtn");
 const filtrarDatos = document.querySelector("#filtrarBtn");  // Corregido el ID
 
@@ -37,34 +37,80 @@ const ocultarError = () => {
     error.classList.add("hidden");
 };
 
-const mostrardatos = (datos) => {
+const mostrardatos = (listaUsuarios) => {
     // imprimir en pantalla las tarjetas de usuario
-}
-
-const cargarDatos = () => {
-
-    // Hacer aquí el fetch
-
-    fetch("./db/datos.json")
-    .then( response => response.json () )
-    .then( datos => {
-        console.log(datos);
-        mostrardatos(datos);
-    })
-    .catch( e => {
-        console.warn("tuvimo un error obteniendo los datos")
+    listaUsuarios.forEach(usuarios => {
+        perfilesContainer.innerHTML +=
     });
-
-
 }
 
+// ---------------------------------------------------------------
+// 
+// ---------------------------------------------------------------
 
 
-cargarDatos.addEventListener("click", cargarDatos);
+const obtenerDatos = async () => {
+    try {
+        const response = await fetch("./db/datos.json");
+        const listaUsuarios = await response.json();
+
+
+        // Llamar a la funcion de mostrar datos en el HTML
+        mostrardatos(listaUsuarios);
+
+    } catch (error) {
+        console.warn("tuvimos un error obteniendo los datos")
+    }
+}
+
+cargarDatosBtn.addEventListener("click", obtenerDatos);
+
+
+const crearTags = (listaDeItems) => {
+    listaDeItems.forEach( item => {
+        return `<span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">${item}</span>`
+    })
+}
+
+const crearTarjetaPerfil = (usuario) => {
+    // decosntrucción de objetos
+    const {id, nombre, profesion, habilidades, experiencias, avatar} = usuario;
+    const habilidadesEtiquetas = crearTags(habilidades);
+}
+function imprimirTarjeta(){
+    document.getElementById("perfiles").innerHTML = `
+    <div class="profile-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="flex items-center justify-center h-40 bg-gradient-to-r from-indigo-500 to-purple-600">
+                    <img class="h-24 w-24 rounded-full border-4 border-white object-cover" src="${avatar}" alt="${nombre}">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800">${nombre}</h3>
+                    <p class="text-indigo-600 font-medium">${profesion}</p>
+                    <div class="mt-3">
+                        <p class="text-gray-700"><span class="font-semibold">Experiencia:</span> ${experiencia}</p>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        ${habilidades}
+                        <span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span> 
+                        <span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">JavaScript</span>
+                        <span class="bg-indigo-100 text-indigo-800 hover:bg-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded">React</span>
+                    </div>
+                </div>
+            </div>`
+    
+};
+
+function esperar(milisegundos) {
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < milisegundos);
+}
 
 // ---------------------------------------------------------------
 // Parte 3: Código de nuestra app
 // ---------------------------------------------------------------
 
+ocultarError();
 mostrarError();
-toggleSpinner();
+toggleSpinner("on");

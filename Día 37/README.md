@@ -140,6 +140,8 @@ Uno de los usos fundamentales de las promesas es en el uso de la Fetch API para 
 
 La función `fetch()` nos permite hacer una petición, y no sdevuelve una promesa.
 
+Los `then` ...
+
 
 ```js
 
