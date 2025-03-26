@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax 2 Effect</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+
+    <section class="seccion-normal"> 
+        <h1>Scroll para ver el efecto Parallax</h1>
+        <p> Esta es una sección normal para ocupar espacio</p>
+    </section>
+
+    <!-- Sección parallax 1 -->
+
+    <section class="parallax-contenedor" id="seccion-1">
+        <!-- Fondo Parallax -->
+        <div class="parallax-bg" style="background-image: url('./images/imagen.png');"></div>
+
+        <div class="parallax-contenido">
+            <h2>Sección Uno</h2>
+            <p>Este contenido está sobre el efecto parallax</p>
+
+             <img src="images/mono.png" alt="mono" class="parallax-flotante" id="flotante-1"
+                data-parallax-type="moveX"
+                data-parallax-speed="0.3"
+             >
+             <!-- Direction -1 invierte el movimiento / rotación base-->
+        </div>
+    </section>
+
+    <section class="seccion-normal"> 
+        <h1>Más contenido normal entre secciones</h1>
+        <p> Sigue haciendo scroll que te lo vas a pasar de rechupete</p>
+    </section>
+
+        <!-- Sección parallax 2 -->
+
+        <section class="parallax-contenedor" id="seccion-2">
+            <!-- Fondo Parallax -->
+            <div class="parallax-bg" style="background-image: url('./images/fondo2.png');"></div>
+    
+            <div class="parallax-contenido">
+                <h2>Sección Uno</h2>
+                <p>Este contenido está sobre el efecto parallax</p>
+    
+                 <img src="images/fantasma.png" alt="mono" class="parallax-flotante" id="flotante-2"
+                    data-parallax-type="moveX,opacity"
+                    data-parallax-speed="0.5"
+                 >
+                 <!-- Direction -1 invierte el movimiento / rotación base-->
+            </div>
+        </section>
+    
+
+    <section class="seccion-normal"> 
+        <h1>última sección de relleno</h1>
+        <p> Casi llegamos al final</p>
+    </section>
+
+            <!-- Sección parallax 3 -->
+
+            <section class="parallax-contenedor" id="seccion-3">
+                <!-- Fondo Parallax -->
+                <div class="parallax-bg" style="background-image: url('./images/fondo3.png');"></div>
+        
+                <div class="parallax-contenido">
+                    <h2>Sección Uno</h2>
+                    <p>Este contenido está sobre el efecto parallax</p>
+        
+                     <img src="images/yoshi.png" alt="mono" class="parallax-flotante" id="flotante-3"
+                        data-parallax-type="moveY,rotate"
+                        data-parallax-speed="0.2"
+                        data-parallax-direction="-1"
+                     >
+                     <!-- Direction -1 invierte el movimiento / rotación base-->
+                </div>
+            </section>
+
+    <section class="seccion-normal"> 
+        <h1>Fin de página</h1>
+    </section>
+</body>
+</html>

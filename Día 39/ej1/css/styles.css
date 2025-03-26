@@ -1,0 +1,63 @@
+.parallax-contenedor {
+    position: relative; /* Necesario para posicionar hijos en absolute */
+    height: 80vh;
+    overflow: hidden; /* Ocultar parte del fondo que no entre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    background-image: url('../images/imagen.png'); /* Ajustar ruta si es necesario */
+    top: -20%;
+    left: 0;
+    width: 100%;
+    height: 140%;
+
+    background-size: cover;
+    background-position: center center;
+    /*z-index: -1;*/
+}
+
+/* Estilos para el elemento flotante que acompañan.... */
+.parallax-elemento-flotante {
+    position: absolute;
+    bottom: 10%;
+    width: 100px;
+    right: 15%;
+    z-index: 2;
+}
+
+.parallax-contenido {
+    position: relative;
+    width: 90vh;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.seccion.normal {  
+    min-height: 20vh; /*  para poder hacer scroll */
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .parallax-bg, .parallax-elemento-flotante {
+        /* Desactivas transitions, animaciones y efectos */
+        transition: none;
+    }
+
+    body{
+        background-color: red;
+    }
+
+}
